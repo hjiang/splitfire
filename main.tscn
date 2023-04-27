@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsuogy7l1ju4f"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_khxov"]
+[ext_resource type="PackedScene" uid="uid://316uukesh25g" path="res://player.tscn" id="1_m5vsi"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_khxov")
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(480, 1000)
+
+[node name="Player" parent="." instance=ExtResource("1_m5vsi")]
+
+[connection signal="fire_weapon" from="Player" to="." method="_on_player_fire_weapon"]
