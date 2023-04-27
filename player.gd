@@ -34,7 +34,7 @@ func _physics_process(delta):
 
 func _input(event):
     if event.is_action_pressed("fire_weapon"):
-        fire_weapon.emit(Bullet, position)
+        fire_weapon.emit(Bullet, $FiringPosition.global_position)
 
 func start(pos):
     position = pos
